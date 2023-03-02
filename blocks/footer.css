@@ -11,12 +11,18 @@
 .footer__copyright {
   margin-top: 67px;
   margin-bottom: 0px;
-  padding-bottom: 60px;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 480px) {
   .footer__copyright {
     font-size: 14px;
     line-height: 16.94px;
+    padding-bottom: 36px;
+    margin-top: 48px;
+  }
+
+  .footer {
+    margin-top: 0px;
+    padding-bottom: 0px;
   }
 }

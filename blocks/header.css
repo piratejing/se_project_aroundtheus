@@ -2,19 +2,19 @@
   width: calc(100% - 40px);
   max-width: 880px;
   margin: auto;
+  margin-bottom: 40px;
   padding-top: 45px;
   padding-bottom: 41px;
+  border-bottom: solid rgba(133, 133, 133, 1) 1px;
 }
 
-.header__line {
-  border-bottom: solid #858585 1px;
-  margin-top: 41px;
-}
-
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 480px) {
   .header {
     padding-top: 28px;
-    padding-bottom: 38.25px;
+    padding-bottom: 32px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
   }
 
   .header__logo {
@@ -27,10 +27,5 @@
 @media screen and (max-width: 879px) {
   .header__logo {
     padding-left: 20px;
-  }
-
-  .header__line {
-    margin-left: 20px;
-    margin-right: 20px;
   }
 }
