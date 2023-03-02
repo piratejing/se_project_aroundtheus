@@ -13,3 +13,5 @@ This is the third project of the Web Development program at Practicum. It was cr
 
 - Use more percentages value to make page feel more responsive
 - Get better with adjusting screen to different devices
+
+https://piratejing.github.io/se_project_aroundtheus
