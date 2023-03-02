@@ -1,0 +1,44 @@
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__image {
+  width: 282px;
+  height: 282px;
+  border-radius: 10px 10px 0px 0px;
+  object-fit: cover;
+}
+
+.card__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  background-color: white;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.card__name {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 25px 0px 25px 20px;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 29.05px;
+}
+
+.card__button {
+  border: none;
+  background-color: white;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  margin-top: 31px;
+}
+
+.card__button:hover {
+  cursor: pointer;
+  transition: 0.2s;
+  opacity: 0.6;
+}

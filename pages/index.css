@@ -1,0 +1,17 @@
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts.css);
+@import url(../vendor/fonts/inter.css);
+@import url(../blocks/page.css);
+@import url(../blocks/header.css);
+@import url(../blocks/profile.css);
+@import url(../blocks/cards.css);
+@import url(../blocks/card.css);
+@import url(../blocks/footer.css);
+
+.page {
+  max-width: 1280px;
+  min-width: 320px;
+  background-color: black;
+  color: white;
+  font-family: "inter", Arial, Helvetica, sans-serif;
+}
