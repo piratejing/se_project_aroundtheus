@@ -5,7 +5,7 @@
   font-family: "inter", Arial, sans-serif;
 }
 
-@media screen and (min-width 1280px) {
+@media screen and (min-width: 1280px) {
   .page {
     width: 100%;
   }
