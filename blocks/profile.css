@@ -17,7 +17,6 @@
   grid-template-columns: auto auto;
   align-items: center;
   gap: 16px 18px;
-  padding-left: 30px;
   margin-right: 10px;
 }
 
@@ -62,6 +61,9 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 21.78px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .profile__button-add {
@@ -102,13 +104,16 @@
   .profile__name {
     font-size: 22px;
     line-height: 26.63px;
+    justify-content: center;
+    align-items: center;
   }
 
   .profile__subtitle {
     font-size: 14px;
     display: flex;
     justify-content: center;
-    padding-left: 10px;
+    align-items: center;
+    padding-left: 25px;
   }
 
   .profile__button-add {
