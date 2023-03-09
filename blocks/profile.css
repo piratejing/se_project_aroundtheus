@@ -17,6 +17,7 @@
   grid-template-columns: auto auto;
   align-items: center;
   gap: 16px 18px;
+  margin-left: 30px;
 }
 
 .profile__name {
