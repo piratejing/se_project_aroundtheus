@@ -113,7 +113,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 25px;
   }
 
   .profile__button-add {
