@@ -22,25 +22,19 @@
           <img class="profile__image" src="./images/jacques-cousteau.png" alt="jacques-cousteau" />
           <div class="profile__info">
             <h1 class="profile__name">Jacques Cousteau</h1>
-            <button
-              class="profile__button-edit"
-              type="button"
-              aria-label="edit button"
-              onclick="document.getElementById('id01').style.display='block'"
-            ></button>
+            <button class="profile__button-edit" type="button" aria-label="edit button"></button>
             <p class="profile__subtitle">Explorer</p>
           </div>
           <button class="profile__button-add" type="button" aria-label="add button"></button>
         </section>
-        <section class="modal" id="id01">
+        <section class="modal">
           <div class="modal__container">
-            <span onclick="document.getElementById('id01').style.display='none'" class="modal__close"></span>
+            <button class="modal__button-close" type="button"></button>
             <h2 class="modal__title">Edit profile</h2>
             <form class="form modal__form">
               <fieldset class="form__fieldset">
                 <label for="name" class="form__label"></label>
                 <input type="text" class="form__input" id="name" placeholder="Name" required />
-
                 <label for="description" class="form__label"></label>
                 <input type="text" class="form__input" id="description" placeholder="Description" required />
               </fieldset>

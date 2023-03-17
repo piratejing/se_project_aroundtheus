@@ -31,3 +31,8 @@
   height: 50px;
   margin-top: 48px;
 }
+
+.form__button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
