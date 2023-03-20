@@ -35,6 +35,7 @@
               <fieldset class="form__fieldset">
                 <label for="name" class="form__label"></label>
                 <input type="text" class="form__input" id="name" placeholder="Name" required />
+
                 <label for="description" class="form__label"></label>
                 <input type="text" class="form__input" id="description" placeholder="Description" required />
               </fieldset>
@@ -42,62 +43,18 @@
             </form>
           </div>
         </section>
-        <section class="cards">
+        <section class="cards"></section>
+        <template id="card-template">
           <div class="card">
-            <img class="card__image" src="./images/yosemite.jpg" alt="yosemite-valley" />
+            <img class="card__image" src="" alt="" />
             <div class="card__info">
-              <h2 class="card__name">Yosemite Valley</h2>
+              <h2 class="card__name"></h2>
               <button class="card__button" type="button">
                 <img class="card__button-like" src="./images/heart.svg" alt="like-button" />
               </button>
             </div>
           </div>
-          <div class="card">
-            <img class="card__image" src="./images/lake-louise.jpg" alt="lake-louise" />
-            <div class="card__info">
-              <h2 class="card__name">Lake Louise</h2>
-              <button class="card__button" type="button">
-                <img class="card__button-like" src="./images/heart.svg" alt="like-button" />
-              </button>
-            </div>
-          </div>
-          <div class="card">
-            <img class="card__image" src="./images/bald-mountains.jpg" alt="bald-mountains" />
-            <div class="card__info">
-              <h2 class="card__name">Bald Mountains</h2>
-              <button class="card__button" type="button">
-                <img class="card__button-like" src="./images/heart.svg" alt="like-button" />
-              </button>
-            </div>
-          </div>
-          <div class="card">
-            <img class="card__image" src="./images/latemar.jpg" alt="latemar" />
-            <div class="card__info">
-              <h2 class="card__name">Latemar</h2>
-              <button class="card__button" type="button">
-                <img class="card__button-like" src="./images/heart.svg" alt="like-button" />
-              </button>
-            </div>
-          </div>
-          <div class="card">
-            <img class="card__image" src="./images/vanoise.jpg" alt="vanoise" />
-            <div class="card__info">
-              <h2 class="card__name">Vanoise National Park</h2>
-              <button class="card__button" type="button">
-                <img class="card__button-like" src="./images/heart.svg" alt="like-button" />
-              </button>
-            </div>
-          </div>
-          <div class="card">
-            <img class="card__image" src="./images/lago.jpg" alt="lago" />
-            <div class="card__info">
-              <h2 class="card__name">Lago di Braies</h2>
-              <button class="card__button" type="button">
-                <img class="card__button-heart" src="./images/heart.svg" alt="like-button" />
-              </button>
-            </div>
-          </div>
-        </section>
+        </template>
       </main>
       <footer class="footer">
         <p class="footer__copyright">&#169; 2022 Around The U.S.</p>

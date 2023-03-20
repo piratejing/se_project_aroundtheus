@@ -51,13 +51,12 @@
   object-fit: cover;
   top: -40px;
   right: -40px;
-  transition: 0.2s ease-in-out;
+  transition: 0.2s;
 }
 
 .modal__button-close:hover {
   cursor: pointer;
   opacity: 0.6;
-  transform: rotate(45deg);
 }
 
 @media screen and (max-width: 480px) {
