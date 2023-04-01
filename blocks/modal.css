@@ -29,12 +29,15 @@
 }
 
 .modal__image-container {
-  max-width: 75vw;
-  max-height: 75vh;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.modal__image {
+  max-width: 75vw;
+  max-height: 75vh;
 }
 
 .modal__image-caption {
