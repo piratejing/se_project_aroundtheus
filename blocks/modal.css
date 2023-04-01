@@ -28,6 +28,20 @@
   box-sizing: border-box;
 }
 
+.modal__image-container {
+  max-width: 75vw;
+  max-height: 75vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal__image-caption {
+  margin-top: 10px;
+  line-height: 15px;
+}
+
 .modal__title {
   color: black;
   margin: 0;
@@ -38,7 +52,7 @@
 }
 
 .modal__button-close {
-  background-color: black;
+  background: none;
   border: none;
   padding: 0;
   outline: inherit;

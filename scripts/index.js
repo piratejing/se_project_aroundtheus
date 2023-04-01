@@ -34,9 +34,13 @@ const editProfileButton = document.querySelector(".profile__button-edit");
 const addCardButton = document.querySelector(".profile__button-add");
 const profileModalCloseButton = editProfileModal.querySelector(".modal__button-close");
 const addCardModalCloseButton = addCardModal.querySelector(".modal__button-close");
+const modalImageCloseButton = document.querySelector("#card-image-modal");
 const cardsEl = document.querySelector(".cards");
 const profileName = document.querySelector(".profile__name");
 const profileSubtitle = document.querySelector(".profile__subtitle");
+const cardImageModal = document.querySelector("#card-image-modal");
+const modalImageEl = document.querySelector(".modal__image");
+const modalImageCaptionEl = document.querySelector(".modal__image-caption");
 
 // Data
 const inputName = document.querySelector("#name");
@@ -79,9 +83,22 @@ function getCardElement(data) {
   const cardImageEl = cardElement.querySelector(".card__image");
   const cardNameEl = cardElement.querySelector(".card__name");
   const likeButton = cardElement.querySelector(".card__button-like");
+  const trashCanButton = cardElement.querySelector(".card__trash-button");
+
+  trashCanButton.addEventListener("click", () => {
+    cardElement.remove();
+  });
+
   likeButton.addEventListener("click", () => {
     likeButton.classList.toggle("card__button_active");
   });
+
+  cardImageEl.addEventListener("click", () => {
+    modalImageEl.src = data.link;
+    modalImageCaptionEl.textContent = data.name;
+    openModal(cardImageModal);
+  });
+
   cardImageEl.src = data.link;
   cardImageEl.alt = data.name;
   cardNameEl.textContent = data.name;
@@ -98,6 +115,7 @@ addCardButton.addEventListener("click", () => openModal(addCardModal));
 
 profileModalCloseButton.addEventListener("click", () => closeModal(editProfileModal));
 addCardModalCloseButton.addEventListener("click", () => closeModal(addCardModal));
+modalImageCloseButton.addEventListener("click", () => closeModal(cardImageModal));
 
 editProfileModal.addEventListener("submit", handleProfileFormSubmit);
 addCardModal.addEventListener("submit", handleAddCardFormSubmit);
