@@ -115,7 +115,9 @@ addCardButton.addEventListener("click", () => openModal(addCardModal));
 
 profileModalCloseButton.addEventListener("click", () => closeModal(editProfileModal));
 addCardModalCloseButton.addEventListener("click", () => closeModal(addCardModal));
-modalImageCloseButton.addEventListener("click", () => closeModal(cardImageModal));
+modalImageCloseButton.addEventListener("click", () => {
+  closeModal(cardImageModal);
+});
 
 editProfileModal.addEventListener("submit", handleProfileFormSubmit);
 addCardModal.addEventListener("submit", handleAddCardFormSubmit);
