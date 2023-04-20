@@ -50,13 +50,38 @@ const cardTitleInput = document.querySelector("#title");
 const cardUrlInput = document.querySelector("#image-link");
 
 // Functions
+
 function openModal(modal) {
   modal.classList.add("modal-open");
+  document.addEventListener("keydown", closeModalEsc);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal-open");
 }
+
+function closeModalEsc(evt) {
+  if (evt.key === "Escape") {
+    const openedModal = document.querySelector(".modal-open");
+    closeModal(openedModal);
+  }
+}
+
+function closeModalClick(modal, evt) {
+  if (evt.target === modal) {
+    closeModal(modal);
+  }
+}
+
+editProfileModal.addEventListener("click", (evt) => {
+  closeModalClick(editProfileModal, evt);
+});
+addCardModal.addEventListener("click", (evt) => {
+  closeModalClick(addCardModal, evt);
+});
+modalImageEl.addEventListener("click", (evt) => {
+  closeModalClick(modalImageEl, evt);
+});
 
 function renderCard(cardData, wrapper) {
   const cardElement = getCardElement(cardData);
