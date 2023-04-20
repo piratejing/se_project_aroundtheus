@@ -32,15 +32,17 @@
           <div class="modal__container">
             <button class="modal__button-close" id="edit-modal-close-button" type="button"></button>
             <h2 class="modal__title">Edit profile</h2>
-            <form class="form modal__form">
+            <form class="form modal__form" novalidate>
               <fieldset class="form__fieldset">
                 <label for="name" class="form__label"></label>
-                <input type="text" class="form__input" id="name" placeholder="Name" required />
+                <input type="text" class="form__input" id="name" placeholder="Name" minlength="2" maxlength="40" required />
+                <span class="form__input-error" id="name-error"></span>
 
                 <label for="description" class="form__label"></label>
-                <input type="text" class="form__input" id="description" placeholder="Description" required />
+                <input type="text" class="form__input" id="description" placeholder="Description" minlength="2" maxlength="200" required />
+                <span class="form__input-error" id="description-error"></span>
               </fieldset>
-              <button class="form__button">Save</button>
+              <button class="form__button" type="submit">Save</button>
             </form>
           </div>
         </section>
@@ -49,15 +51,17 @@
           <div class="modal__container">
             <button class="modal__button-close" id="add-modal-close-button" type="button"></button>
             <h2 class="modal__title">New place</h2>
-            <form class="form modal__form" id="add-card-form">
+            <form class="form modal__form" id="add-card-form" novalidate>
               <fieldset class="form__fieldset">
                 <label for="title" class="form__label"></label>
-                <input type="text" class="form__input form__input_type_title" id="title" placeholder="Title" required />
+                <input type="text" class="form__input form__input_type_title" id="title" placeholder="Title" minlength="1" maxlength="30" required />
+                <span class="form__input-error" id="title-error"></span>
 
                 <label for="image-link" class="form__label"></label>
                 <input type="url" class="form__input form__input_type_url" id="image-link" placeholder="Image link" required />
+                <span class="form__input-error" id="image-link-error"></span>
               </fieldset>
-              <button class="form__button">Create</button>
+              <button class="form__button" type="submit">Create</button>
             </form>
           </div>
         </section>
@@ -91,5 +95,6 @@
       </footer>
     </div>
     <script src="./scripts/index.js" defer></script>
+    <script src="./scripts/validation.js" defer></script>
   </body>
 </html>

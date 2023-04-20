@@ -37,3 +37,32 @@
   transition: 0.2s;
   cursor: pointer;
 }
+
+.form__button_disabled {
+  background-color: #f7f7f7;
+  cursor: default;
+}
+
+.form__button_disabled:hover:not(:disabled) {
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+.form__input_type_error {
+  border-bottom: 1px solid red;
+}
+
+.form__input-error {
+  color: red;
+  font-family: "inter", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  margin: 0;
+  margin-bottom: 13px;
+  padding: 0;
+}
+
+.form__input-error:last-of-type {
+  margin-bottom: 31.34px;
+}
