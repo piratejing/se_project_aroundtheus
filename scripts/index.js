@@ -80,8 +80,8 @@ editProfileModal.addEventListener("click", (evt) => {
 addCardModal.addEventListener("click", (evt) => {
   closeModalClick(addCardModal, evt);
 });
-modalImageEl.addEventListener("click", (evt) => {
-  closeModalClick(modalImageEl, evt);
+cardImageModal.addEventListener("click", (evt) => {
+  closeModalClick(cardImageModal, evt);
 });
 
 function renderCard(cardData, wrapper) {
