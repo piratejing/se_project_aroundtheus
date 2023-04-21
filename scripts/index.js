@@ -28,6 +28,7 @@ const cardTemplate = document.querySelector("#card-template").content.firstEleme
 
 const editProfileModal = document.querySelector("#edit-modal");
 const addCardModal = document.querySelector("#add-card-modal");
+const cardImageModal = document.querySelector("#card-image-modal");
 const addCardForm = document.querySelector("#add-card-form");
 
 // Buttons and Nodes
@@ -35,11 +36,10 @@ const editProfileButton = document.querySelector(".profile__button-edit");
 const addCardButton = document.querySelector(".profile__button-add");
 const profileModalCloseButton = editProfileModal.querySelector(".modal__button-close");
 const addCardModalCloseButton = addCardModal.querySelector(".modal__button-close");
-const modalImageCloseButton = document.querySelector("#card-image-modal");
+const modalImageCloseButton = document.querySelector("#image-modal-close-button");
 const cardsEl = document.querySelector(".cards");
 const profileName = document.querySelector(".profile__name");
 const profileSubtitle = document.querySelector(".profile__subtitle");
-const cardImageModal = document.querySelector("#card-image-modal");
 const modalImageEl = document.querySelector(".modal__image");
 const modalImageCaptionEl = document.querySelector(".modal__image-caption");
 
@@ -58,6 +58,7 @@ function openModal(modal) {
 
 function closeModal(modal) {
   modal.classList.remove("modal-open");
+  document.removeEventListener("keydown", closeModalEsc);
 }
 
 function closeModalEsc(evt) {
@@ -112,7 +113,11 @@ function handleAddCardFormSubmit(evt) {
     link: cardUrlInput.value,
   };
   renderCard(cardNameLink, cardsEl);
-  addCardForm.reset();
+
+  event.target.reset();
+
+  toggleButtonState(Array.from(addCardForm.querySelectorAll(config.inputSelector)), addCardForm.querySelector(config.submitButtonSelector), config);
+
   closeModal(addCardModal);
   cardsEl.prepend(cardElement);
 }
