@@ -37,10 +37,8 @@ function setEventListeners(formEl, options) {
   const { inputSelector } = options;
   const inputElements = [...formEl.querySelectorAll(inputSelector)];
   const submitButton = formEl.querySelector(options.submitButtonSelector);
-  const cardSubmitButton = document.querySelector("#card-submit-button");
 
-  cardSubmitButton.classList.add(options.inactiveButtonClass);
-  cardSubmitButton.disabled = true;
+  toggleButtonState(inputElements, submitButton, options);
 
   inputElements.forEach((formInputEl) => {
     formInputEl.addEventListener("input", () => {

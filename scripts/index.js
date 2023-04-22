@@ -52,18 +52,18 @@ const cardUrlInput = document.querySelector("#image-link");
 // Functions
 
 function openModal(modal) {
-  modal.classList.add("modal-open");
+  modal.classList.add("modal_open");
   document.addEventListener("keydown", closeModalEsc);
 }
 
 function closeModal(modal) {
-  modal.classList.remove("modal-open");
+  modal.classList.remove("modal_open");
   document.removeEventListener("keydown", closeModalEsc);
 }
 
 function closeModalEsc(evt) {
   if (evt.key === "Escape") {
-    const openedModal = document.querySelector(".modal-open");
+    const openedModal = document.querySelector(".modal_open");
     closeModal(openedModal);
   }
 }
