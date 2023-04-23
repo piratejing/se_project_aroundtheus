@@ -108,6 +108,8 @@ function handleProfileFormSubmit(evt) {
 
 function handleAddCardFormSubmit(evt) {
   evt.preventDefault();
+
+  const cardElement = document.getElementById("card-template");
   const cardNameLink = {
     name: cardTitleInput.value,
     link: cardUrlInput.value,
