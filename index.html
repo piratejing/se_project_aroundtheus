@@ -32,7 +32,7 @@
           <div class="modal__container">
             <button class="modal__button-close" id="edit-modal-close-button" type="button"></button>
             <h2 class="modal__title">Edit profile</h2>
-            <form class="form modal__form" novalidate>
+            <form class="form modal__form" id="edit-profile-form" novalidate>
               <fieldset class="form__fieldset">
                 <label for="name" class="form__label"></label>
                 <input type="text" class="form__input" id="name" placeholder="Name" minlength="2" maxlength="40" required />
@@ -94,7 +94,8 @@
         <p class="footer__copyright">&#169; 2022 Around The U.S.</p>
       </footer>
     </div>
-    <script type="module" src="./scripts/index.js" defer></script>
-    <script src="./scripts/validation.js" defer></script>
+    <script type="module" src="./pages/index.js" defer></script>
+    <!-- <script src="./components/validation.js" defer></script> -->
+    <!-- <script src="./scripts/FormValidator.js" defer></script> -->
   </body>
 </html>
