@@ -4,98 +4,108 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Alan Shieh" />
-    <meta name="keywords" content="HTML, CSS, JavaScript" />
-    <meta name="description" content="Around the U.S. and places Jacques Cousteau visited" />
+    <meta name="author" content="Chris Yee" />
+    <meta name="description" content="A gallery of beautiful mountain sceneries" />
+    <meta name="keywords" content="HTML, CSS" />
+    <link rel="shortcut icon" href="./favicon.ico" />
     <link rel="stylesheet" href="./pages/index.css" />
-    <link rel="shortcut icon" href="favicon.ico" />
-    <title>Around the U.S.</title>
+    <title>Adventure Time</title>
   </head>
-
   <body>
     <div class="page">
       <header class="header">
-        <img class="header__logo" src="./images/around-the-us.svg" alt="around-the-U.S." />
+        <img class="header__logo" src="./images/logo.svg" alt="Around the US logo" />
       </header>
+
       <main class="main">
         <section class="profile">
-          <img class="profile__image" src="./images/jacques-cousteau.png" alt="jacques-cousteau" />
+          <img class="profile__picture" src="./images/profile-pic.png" alt="Picture of Explorer, Jacques Cousteau" />
           <div class="profile__info">
-            <h1 class="profile__name">Jacques Cousteau</h1>
-            <button class="profile__button-edit" type="button" aria-label="edit button"></button>
+            <div class="profile__title">
+              <h1 class="profile__author">Jacques Cousteau</h1>
+
+              <button class="profile__edit-button" type="button"></button>
+            </div>
+
             <p class="profile__subtitle">Explorer</p>
           </div>
-          <button class="profile__button-add" type="button" aria-label="add button"></button>
+
+          <button class="profile__add-button" type="button"></button>
         </section>
-        <!-- Edit Profile Modal -->
+
+        <!--EDIT MODAL-->
         <section class="modal" id="edit-modal">
           <div class="modal__container">
-            <button class="modal__button-close" id="edit-modal-close-button" type="button"></button>
-            <h2 class="modal__title">Edit profile</h2>
-            <form class="form modal__form" id="edit-profile-form" novalidate>
+            <form class="modal__form form" id="edit-profile-form" novalidate>
+              <button class="modal__close-button" type="button"></button>
+              <h2 class="form__title">Edit profile</h2>
               <fieldset class="form__fieldset">
                 <label for="name" class="form__label"></label>
-                <input type="text" class="form__input" id="name" placeholder="Name" minlength="2" maxlength="40" required />
-                <span class="form__input-error" id="name-error"></span>
-
+                <input class="form__input form__input_type_name" type="text" placeholder="Name" id="name" minlength="2" maxlength="40" required />
+                <span class="form__error" id="name-error"></span>
                 <label for="description" class="form__label"></label>
-                <input type="text" class="form__input" id="description" placeholder="Description" minlength="2" maxlength="200" required />
-                <span class="form__input-error" id="description-error"></span>
+                <input
+                  class="form__input form__input_type_description"
+                  type="text"
+                  placeholder="Description"
+                  id="description"
+                  minlength="2"
+                  maxlength="400"
+                  required
+                />
+                <span class="form__error" id="description-error"></span>
               </fieldset>
-              <button class="form__button" type="submit">Save</button>
+              <button class="form__save-button" type="submit">Save</button>
             </form>
           </div>
         </section>
-        <!-- Add Card Modal -->
-        <section class="modal" id="add-card-modal">
-          <div class="modal__container">
-            <button class="modal__button-close" id="add-modal-close-button" type="button"></button>
-            <h2 class="modal__title">New place</h2>
-            <form class="form modal__form" id="add-card-form" novalidate>
-              <fieldset class="form__fieldset">
-                <label for="title" class="form__label"></label>
-                <input type="text" class="form__input form__input_type_title" id="title" placeholder="Title" minlength="1" maxlength="30" required />
-                <span class="form__input-error" id="title-error"></span>
 
-                <label for="image-link" class="form__label"></label>
-                <input type="url" class="form__input form__input_type_url" id="image-link" placeholder="Image link" required />
-                <span class="form__input-error" id="image-link-error"></span>
+        <!--ADD MODAL-->
+        <section class="modal" id="add-modal">
+          <div class="modal__container">
+            <form class="modal__form form" id="add-card-form" novalidate>
+              <button class="modal__close-button" type="button"></button>
+              <h2 class="form__title">New Place</h2>
+              <fieldset class="form__fieldset">
+                <label for="name" class="form__label"></label>
+                <input class="form__input form__input_type_title" type="text" placeholder="Title" id="title" minlength="1" maxlength="30" required />
+                <span class="form__error" id="title-error"></span>
+                <label for="URL" class="form__label"></label>
+                <input class="form__input form__input_type_url" type="url" placeholder="Image URL" id="URL" required />
+                <span class="form__error" id="URL-error"></span>
               </fieldset>
-              <button class="form__button" type="submit">Create</button>
+              <button class="form__save-button form__save-button_disabled" type="submit" disabled>Save</button>
             </form>
           </div>
         </section>
-        <!-- Card Image Modal -->
-        <section class="modal" id="card-image-modal">
-          <div class="modal__image-container">
-            <button class="modal__button-close" id="image-modal-close-button" type="button"></button>
-            <img class="modal__image" src="#" alt="" />
-            <p class="modal__image-caption"></p>
+
+        <section class="cards"></section>
+
+        <template id="card-template">
+          <li class="card">
+            <img src="" class="card__image" alt="" />
+            <button class="card__trash-button" type="button"></button>
+            <div class="card__info">
+              <h2 class="card__title"></h2>
+              <button class="card__like-button" type="button"></button>
+            </div>
+          </li>
+        </template>
+
+        <!--PREVIEW MODAL-->
+        <section class="modal" id="modal__popup">
+          <div class="modal__popup-container">
+            <button class="modal__close-button" type="button"></button>
+            <img class="modal__popup-img" src="#" alt="" />
+            <p class="modal__popup-title"></p>
           </div>
         </section>
-        <!-- Cards Template -->
-        <section class="cards"></section>
-        <template id="card-template">
-          <div class="card">
-            <button class="card__trash-button" type="button">
-              <img class="card__trashcan" src="./images/Trash.svg" alt="trash-button" />
-            </button>
-            <img class="card__image" src="" alt="" />
-            <div class="card__info">
-              <h2 class="card__name"></h2>
-              <button class="card__button" type="button">
-                <img class="card__button-like" src="./images/heart.svg" alt="like-button" />
-              </button>
-            </div>
-          </div>
-        </template>
       </main>
+
       <footer class="footer">
-        <p class="footer__copyright">&#169; 2022 Around The U.S.</p>
+        <p class="footer__copyright">&#169; 2023 Around The U.S.</p>
       </footer>
     </div>
     <script type="module" src="./pages/index.js" defer></script>
-    <!-- <script src="./components/validation.js" defer></script> -->
-    <!-- <script src="./scripts/FormValidator.js" defer></script> -->
   </body>
 </html>
