@@ -1,17 +1,9 @@
 .cards {
-  width: calc(100% - 40px);
   max-width: 880px;
+  width: calc(100% - 54px);
   display: grid;
   grid-template-columns: repeat(auto-fit, 282px);
   gap: 20px 17px;
+  margin: 0 auto;
   justify-content: center;
-  list-style: none;
-  margin: auto;
-  margin-top: 51px;
-}
-
-@media screen and (max-width: 480px) {
-  .cards {
-    margin-top: 36px;
-  }
 }

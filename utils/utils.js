@@ -1,22 +1,24 @@
-export function openModal(modal) {
-  modal.classList.add("modal_open");
-  document.addEventListener("keydown", closeModalEsc);
+export function closeModal(modal) {
+  modal.classList.remove("modal_opened");
+  document.removeEventListener("keydown", closeModalEsc);
+  modal.removeEventListener("mousedown", closeModalClick);
 }
 
-export function closeModal(modal) {
-  modal.classList.remove("modal_open");
-  document.removeEventListener("keydown", closeModalEsc);
+export function openModal(modal) {
+  modal.classList.add("modal_opened");
+  document.addEventListener("keydown", closeModalEsc);
+  modal.addEventListener("mousedown", closeModalClick);
 }
 
 export function closeModalEsc(evt) {
   if (evt.key === "Escape") {
-    const openedModal = document.querySelector(".modal_open");
+    const openedModal = document.querySelector(".modal_opened");
     closeModal(openedModal);
   }
 }
 
-export function closeModalClick(modal, evt) {
-  if (evt.target === modal) {
-    closeModal(modal);
+export function closeModalClick(evt) {
+  if (evt.target === evt.currentTarget) {
+    closeModal(evt.target);
   }
 }
