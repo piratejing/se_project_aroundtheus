@@ -70,8 +70,11 @@ const config = {
 
 // Enable Validation
 const editFormValidator = new FormValidator(config, editForm);
+
 editFormValidator.enableValidation();
+
 const addFormValidator = new FormValidator(config, addCardForm);
+
 addFormValidator.enableValidation();
 
 // Cards
