@@ -37,8 +37,8 @@ export const cardSelector = "#card-template";
 
 export const profileEditModal = document.querySelector("#edit-modal");
 export const profileForm = document.querySelector("#edit-profile-form");
-export const profileName = ".form__input_type_name";
-export const profileJob = ".form__input_type_description";
+export const profileName = ".profile__author";
+export const profileJob = ".profile__subtitle";
 
 export const addCardModal = document.querySelector("#add-modal");
 export const addCardForm = document.querySelector("#add-card-form");
