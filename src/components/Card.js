@@ -1,4 +1,4 @@
-export default class Card {
+class Card {
   constructor({ cardData, handleImageClick }, cardSelector) {
     this._name = cardData.name;
     this._link = cardData.link;
@@ -8,7 +8,9 @@ export default class Card {
   }
 
   _getTemplate() {
-    const cardElement = this._cardSelector.content.querySelector(".card").cloneNode(true);
+    const cardElement = this._cardSelector.content
+      .querySelector(".card__element")
+      .cloneNode(true);
 
     return cardElement;
   }
@@ -18,7 +20,9 @@ export default class Card {
 
     this._deleteButton.addEventListener("click", this._handleDeleteCard);
 
-    this._cardImage.addEventListener("click", () => this._handleImageClick({ name: this._name, link: this._link }));
+    this._cardImage.addEventListener("click", () =>
+      this._handleImageClick({ name: this._name, link: this._link })
+    );
   }
 
   _handleLikeIcon = () => {
@@ -33,12 +37,12 @@ export default class Card {
   generateCard() {
     this._element = this._getTemplate();
     this._likeButton = this._element.querySelector(".card__like-button");
-    this._deleteButton = this._element.querySelector(".card__trash-button");
+    this._deleteButton = this._element.querySelector(".card__delete-button");
     this._cardImage = this._element.querySelector(".card__image");
 
     this._setEventListeners();
 
-    const cardName = this._element.querySelector(".card__title");
+    const cardName = this._element.querySelector(".card__name");
 
     this._cardImage.src = this._link;
     this._cardImage.alt = this._name;
@@ -47,3 +51,5 @@ export default class Card {
     return this._element;
   }
 }
+
+export default Card;

@@ -1,25 +1,26 @@
 .header {
-  max-width: 880px;
-  width: calc(100% - 54px);
-  margin: auto;
+  min-height: 120px;
   display: flex;
-  border-bottom: rgba(84, 84, 84, 0.7) solid 1px;
-  padding: 0;
+  align-items: center;
+  border-bottom: 1px solid rgba(84, 84, 84, 0.7);
 }
 
 .header__logo {
-  width: 172px;
-  padding: 0;
-  margin: 45px 0 41px;
+  width: 173px;
+  height: 33px;
+  object-fit: contain;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 486px) {
   .header {
-    width: 100%;
+    min-height: 90px;
+    max-width: 100%;
+    margin: 0;
   }
+
   .header__logo {
-    margin: 28px auto 32px 27px;
-    height: 24px;
     width: 126px;
+    height: 24px;
+    margin-left: 20px;
   }
 }
