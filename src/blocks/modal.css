@@ -54,6 +54,7 @@
 
 .modal__close:hover {
   opacity: 0.6;
+  transition: 0.2s;
 }
 
 .modal__heading {
@@ -118,6 +119,7 @@
 
 .modal__button:hover {
   opacity: 0.8;
+  transition: 0.2s;
 }
 
 .modal__error {

@@ -13,10 +13,9 @@
 }
 
 .card__delete-button {
-  height: 20px;
+  height: 19.3px;
   width: 18px;
   background: transparent url("../images/delete-icon.svg") center no-repeat;
-  background-size: 20px 18px;
   border: none;
   cursor: pointer;
   margin: 0;
@@ -28,6 +27,7 @@
 
 .card__delete-button:hover {
   opacity: 0.6;
+  transition: 0.2s;
 }
 
 .card__description {
@@ -64,4 +64,5 @@
 
 .card__like-button:hover {
   opacity: 0.5;
+  transition: 0.2s;
 }
