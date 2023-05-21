@@ -1,26 +1,28 @@
 .header {
-  min-height: 120px;
-  display: flex;
-  align-items: center;
+  padding-top: 45px;
   border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+  padding-bottom: 41px;
+  width: 100%;
+  max-width: 880px;
+  position: relative;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
-.header__logo {
-  width: 173px;
+.header__image {
+  width: 172px;
   height: 33px;
-  object-fit: contain;
 }
 
-@media screen and (max-width: 486px) {
+@media screen and (max-width: 1100px) {
   .header {
-    min-height: 90px;
-    max-width: 100%;
-    margin: 0;
+    padding-top: 28px;
+    padding-left: 27px;
+    padding-bottom: 32px;
   }
 
-  .header__logo {
+  .header__image {
     width: 126px;
     height: 24px;
-    margin-left: 20px;
   }
 }

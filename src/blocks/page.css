@@ -1,31 +1,25 @@
 .page {
-  background: #000;
+  background-color: #000000;
+  color: white;
+  margin: 0;
 }
 
 .page__content {
-  background-color: #000;
-  min-height: 100vh;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+  max-width: 1280px;
+  margin: 0 auto 0 auto;
 }
 
 .page__section {
-  width: 100%;
-  max-width: 882px;
-  box-sizing: border-box;
+  width: 880px;
   position: relative;
   margin: 0 auto;
 }
 
-.content {
-  flex: 1 0 auto;
-}
-
 @media screen and (max-width: 1100px) {
   .page__section {
-    margin: 0 20px;
-    max-width: calc(100% - 40px);
+    max-width: calc(100% - 38px);
   }
 }

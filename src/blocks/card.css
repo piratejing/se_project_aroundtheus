@@ -1,68 +1,87 @@
-.card {
-  font-family: "Inter", Arial, sans-serif;
-  border-radius: 10px;
+.card__title {
+  font-family: "Inter", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   overflow: hidden;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.card {
+  position: relative;
   display: flex;
   flex-direction: column;
-  position: relative;
+  list-style: none;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .card__image {
+  width: 282px;
   height: 282px;
   cursor: pointer;
 }
 
-.card__delete-button {
-  height: 19.3px;
-  width: 18px;
-  background: transparent url("../images/delete-icon.svg") center no-repeat;
-  border: none;
-  cursor: pointer;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 18px;
-  right: 15px;
-}
-
-.card__delete-button:hover {
-  opacity: 0.6;
-  transition: 0.2s;
-}
-
 .card__description {
   display: flex;
-  justify-content: space-between;
+  background-color: white;
+  color: black;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
   align-items: center;
-  background: #fff;
-  padding: 25px 20px 25px 20px;
-}
-
-.card__name {
-  max-width: 220px;
-  font-size: 24px;
-  font-weight: 900;
-  line-height: 1.2;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  margin: 0;
+  justify-content: space-between;
 }
 
 .card__like-button {
-  height: 18px;
+  background: transparent url(../images/Vectorinactive.svg) center no-repeat;
   width: 21px;
-  background: transparent url("../images/heart-button.svg") center no-repeat;
+  height: 18px;
+  flex-shrink: 0;
   border: none;
+  transition: 0.5s ease-in;
   cursor: pointer;
+}
+
+.card__likes-counter {
+  position: absolute;
+  color: #000;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.2;
+  margin: 40px 0 0 228px;
   padding: 0;
 }
 
 .card__like-button_active {
-  background-image: url("../images/active-like-button.svg");
+  background-image: url(../images/Unionactive.svg);
 }
 
 .card__like-button:hover {
   opacity: 0.5;
-  transition: 0.2s;
+  cursor: pointer;
+}
+
+.card__delete-button {
+  background: transparent;
+  border: none;
+  position: absolute;
+  display: flex;
+  width: 25px;
+  height: 25px;
+  top: 18px;
+  right: 15px;
+  z-index: 2;
+  cursor: pointer;
+  transition: 0.2s, ease-in-out;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.card__delete-button:hover {
+  opacity: 0.6;
 }
