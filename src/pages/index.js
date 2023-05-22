@@ -115,9 +115,10 @@ function handleAvatarFormSubmit(data) {
       editAvatar.renderLoading(false, "Save");
     });
 }
-avatarButton.addEventListener("click", () => editAvatar.open());
-
-avatarFormValidator.toggleButtonState();
+avatarButton.addEventListener("click", () => {
+  avatarFormValidator.toggleButtonState();
+  editAvatar.open();
+});
 
 function handleProfileSubmit(inputValues) {
   editPopup.renderLoading(true);
