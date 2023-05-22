@@ -2,9 +2,8 @@ import Popup from "./Popup.js";
 
 export default class PopupWithImage extends Popup {
   constructor(popupSelector) {
-    super(popupSelector);
-    // FIXME
-    // this._modalElement = document.querySelector(popupSelector);
+    super({ popupSelector });
+
     this._modalImage = this._modalElement.querySelector(".modal__preview-image");
     this._modalTitle = this._modalElement.querySelector(".modal__preview-footer");
   }
