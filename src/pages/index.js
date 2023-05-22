@@ -112,11 +112,12 @@ function handleAvatarFormSubmit(data) {
       console.log(err);
     })
     .finally(() => {
-      //loadImage(data.imageURL);
       editAvatar.renderLoading(false, "Save");
     });
 }
 avatarButton.addEventListener("click", () => editAvatar.open());
+
+avatarFormValidator.toggleButtonState();
 
 function handleProfileSubmit(inputValues) {
   editPopup.renderLoading(true);
@@ -188,21 +189,26 @@ function createCard(cardData) {
 
 let cardSection;
 let userId;
-api.getApiInfo().then(([userData, cards]) => {
-  userId = userData._id;
-  userInfo.setUserInfo({ title: userData.name, job: userData.about });
-  userInfo.setAvatarInfo({ avatar: userData.avatar });
-  cardSection = new Section(
-    {
-      items: cards,
-      renderer: (cardData) => {
-        cardSection.addItem(createCard(cardData));
+api
+  .getApiInfo()
+  .then(([userData, cards]) => {
+    userId = userData._id;
+    userInfo.setUserInfo({ title: userData.name, job: userData.about });
+    userInfo.setAvatarInfo({ avatar: userData.avatar });
+    cardSection = new Section(
+      {
+        items: cards,
+        renderer: (cardData) => {
+          cardSection.addItem(createCard(cardData));
+        },
       },
-    },
-    ".cards__list"
-  );
-  cardSection.renderItems();
-});
+      ".cards__list"
+    );
+    cardSection.renderItems();
+  })
+  .catch((error) => {
+    console.log(error);
+  });
 
 function handleCardFormSubmit(inputValues) {
   cardPopup.renderLoading(true);

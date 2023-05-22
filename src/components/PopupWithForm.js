@@ -4,15 +4,9 @@ export default class PopupWithForm extends Popup {
   constructor({ popupSelector, handleFormSubmit }) {
     super({ popupSelector });
     this._form = this._modalElement.querySelector(".modal__form");
-    this._saveButton = this._modalElement.querySelector(
-      ".modal__submit-button"
-    );
+    this._saveButton = this._modalElement.querySelector(".modal__submit-button");
 
     this._handleFormSubmit = handleFormSubmit;
-  }
-
-  open() {
-    super.open();
   }
 
   renderLoading(isLoading, saveButtonText) {
@@ -24,9 +18,7 @@ export default class PopupWithForm extends Popup {
   }
 
   _getInputValues() {
-    const inputs = [
-      ...this._modalElement.querySelectorAll(".modal__form-input"),
-    ];
+    const inputs = [...this._modalElement.querySelectorAll(".modal__form-input")];
     const inputValues = {};
     inputs.forEach((input) => {
       inputValues[input.name] = input.value;
