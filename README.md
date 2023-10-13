@@ -1,13 +1,12 @@
-# Practicum Coffee Shop
+# Project: Around The U.S.
 
-This is the third project of the Web Development program at Practicum. It was created using HTML and CSS, based on the design brief.
+### Overview  
 
-## Project features
+A functional HTML and CSS website that is responsive to various screen resolutions.
 
-- Gridbox/Grid lyout
-- Using percentages with sizing
-- Responsive webpage
-- Developing interface for different devices
+### Technology
+
+Created using a design brief in Figma and using Visual Studio Code.
 
 ## Plan on improving the project
 
