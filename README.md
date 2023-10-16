@@ -1,17 +1,31 @@
-# Practicum Coffee Shop
+# Around The U.S.
 
-This is the third project of the Web Development program at Practicum. It was created using HTML and CSS, based on the design brief.
+## About the project
 
-## Project features
+The Around the US website is a gallery website that uses one of Practicum's databases. Multiple students have access to the same database with a unique API key. You can only delete the images that you have added to the site.
 
-- Gridbox/Grid lyout
-- Using percentages with sizing
-- Responsive webpage
-- Developing interface for different devices
+**Technologies:** HTML • CSS • Figma • BEM • JavaScript • Git • JSON • Webpack • GitHub • Fetch API
 
-## Plan on improving the project
+| Key features                                               |
+| ---------------------------------------------------------- |
+| Images are loaded from a remote server using the Fetch API |
+| API authentication is required to delete images            |
+| All profile info is stored in an external database         |
 
-- Use more percentages value to make page feel more responsive
-- Get better with adjusting screen to different devices
+**Links**
 
-https://piratejing.github.io/se_project_aroundtheus
+- [Figma Design](https://www.figma.com/file/ii4xxsJ0ghevUOcssTlHZv/Sprint-3%3A-Around-the-US?node-id=0%3A1)
+- [Project Live](https://aroundus.surge.sh/)
+
+## Screenshots
+
+Place Modal
+![Around the U.S. Home Page](./src/images/placemodal.png "Home Page")
+
+Edit Profile Modal
+![Edit Profile Modal](./src/images/editprofile.png "Profile Modal")
+
+New Place Modal
+![New Place Modal](./src/images/newplace.png "New Place Modal")
+
+**Created By [Alan Shieh](https://github.com/piratejing)**
